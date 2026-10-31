@@ -1,6 +1,5 @@
 
 import type { Producto } from './types';
-
 export const productos: Producto[] = [
   { id: 'p1', nombre: 'Café americano', categoria: 'bebida', precio: 35, disponibilidad: 'disponible' },
   { id: 'p2', nombre: 'Licuado de fresa', categoria: 'bebida', precio: 55, disponibilidad: 'pocasUnidades', esNuevo: true },
