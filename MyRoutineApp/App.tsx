@@ -7,8 +7,8 @@ export default function App() {
     <View style={styles.container}>
       <Text>Open up App.tsx to start working on your app!</Text>
       <View style ={styles.buttonsContainer}>
-          <CustomButton tittle = "My App Button #2"/>
-          <CustomButton tittle = "My App Button"/>
+          <CustomButton {...({ title: 'My App Button #2' } as any)} />
+          <CustomButton {...({ title: 'My App Button' } as any)} />
       </View>
     </View>
   );
