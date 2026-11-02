@@ -1,4 +1,3 @@
-import { createElement } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 type CajaEstadisticaProps = {
@@ -7,11 +6,11 @@ type CajaEstadisticaProps = {
 };
 
 export default function CajaEstadistica({ valor, etiqueta }: CajaEstadisticaProps) {
-  return createElement(
-    View,
-    { style: estilos.caja },
-    createElement(Text, { style: estilos.valor }, valor),
-    createElement(Text, { style: estilos.etiqueta }, etiqueta),
+  return (
+    <View style={estilos.caja}>
+      <Text style={estilos.valor}>{valor}</Text>
+      <Text style={estilos.etiqueta}>{etiqueta}</Text>
+    </View>
   );
 }
 
