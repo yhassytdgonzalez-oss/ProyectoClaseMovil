@@ -1,0 +1,41 @@
+import { createElement } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+
+type CajaEstadisticaProps = {
+  valor: string;
+  etiqueta: string;
+};
+
+export default function CajaEstadistica({ valor, etiqueta }: CajaEstadisticaProps) {
+  return createElement(
+    View,
+    { style: estilos.caja },
+    createElement(Text, { style: estilos.valor }, valor),
+    createElement(Text, { style: estilos.etiqueta }, etiqueta),
+  );
+}
+
+const estilos = StyleSheet.create({
+  caja: {
+    flex: 1,
+    padding: 12,
+    backgroundColor: '#F3F4F6',
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: '#E5E7EB',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  valor: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#111827',
+    textAlign: 'center',
+  },
+  etiqueta: {
+    fontSize: 12,
+    color: '#6B7280',
+    textAlign: 'center',
+    marginTop: 4,
+  },
+});

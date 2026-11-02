@@ -7,7 +7,7 @@ type EncabezadoProps = {
 
 export default function Encabezado({titulo, subtitulo}: EncabezadoProps) {
     return (
-        <View style={styles.encabezado}>
+        <View style={styles.contenedor}>
             <Text style={styles.titulo}>{titulo}</Text>
             <Text style={styles.subtitulo}>{subtitulo}</Text>
         </View>
@@ -15,7 +15,17 @@ export default function Encabezado({titulo, subtitulo}: EncabezadoProps) {
 }
 
 const styles = StyleSheet.create({
-    encabezado: {},
-    titulo: {},
-    subtitulo: {},
+   contenedor: {
+    paddingVertical: 8,
+    marginBottom: 20,
+   },
+   titulo: {
+    fontSize: 16,
+    color: '#6B7280',
+    marginTop: 4,
+   },
+   subtitulo: {
+    fontSize: 14,
+    color: '#6B7280',
+   },
 });
